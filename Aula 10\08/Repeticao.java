@@ -1,0 +1,27 @@
+public class Repeticao{
+	public static void main(String[] args) {
+		int qtde = 5;
+		
+		//para
+		System.out.println("Repetição do tipo for");
+		for(int i = 0; i < qtde; i++){
+			System.out.println(i);
+		}//poderia ser (int i = 10; i > qtde; i--)
+		
+		//enquanto
+		System.out.println("Repetição do tipo while");
+		int cont = 1;
+		while(cont <= qtde){
+			System.out.println(cont);
+			cont++;
+		}
+		
+		//faça enquanto
+		System.out.println("Repetição do tipo do..while");
+		cont = 1;
+		do{
+			System.out.println(cont);
+			cont++;
+		}while(cont <= qtde);
+	}
+}
