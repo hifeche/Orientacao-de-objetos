@@ -1,16 +1,19 @@
 public class voo {
     private float id;
-    private float numero;
-    private String companhia;
     private String origem;
     private String destino;
-    private float data;
     private float hora_saida;
     private float hora_chagada;
     private String status;
     private String pilotos;
+    private passageiro[] vetPassageiros;
+    private int Qntdpass;
     
     
+    public voo() {
+    this.vetPassageiros = new passageiro[50];
+    }
+
     
     public float getId() {
         return id;
@@ -22,31 +25,11 @@ public class voo {
     }
     
     
-    public float getNumero() {
-        return numero;
-    }
-    
-    
-    public void setNumero(float numero) {
-        this.numero = numero;
-    }
-    
-    
-    public String getCompanhia() {
-        return companhia;
-    }
-    
-    
-    public void setCompanhia(String companhia) {
-        this.companhia = companhia;
-    }
-    
-    
     public String getOrigem() {
         return origem;
     }
-
-
+    
+    
     public void setOrigem(String origem) {
         this.origem = origem;
     }
@@ -59,16 +42,6 @@ public class voo {
     
     public void setDestino(String destino) {
         this.destino = destino;
-    }
-    
-    
-    public float getData() {
-        return data;
-    }
-    
-    
-    public void setData(float data) {
-        this.data = data;
     }
     
     
@@ -105,10 +78,32 @@ public class voo {
     public String getPilotos() {
         return pilotos;
     }
-
-
+    
+    
     public void setPilotos(String pilotos) {
         this.pilotos = pilotos;
     }
+    
+    
+    public int getQntdpass() {
+        return Qntdpass;
+    }
+    
+    
+    public void setQntdpass(int qntdpass) {
+        Qntdpass = qntdpass;
+    }
 
+
+    public passageiro getpassageiro(int pos) {
+        return this.vetPassageiros[pos];
+    }
+    
+    
+    public void setpassageiro(passageiro a) {
+        if (this.Qntdpass < 50) {
+            this.vetPassageiros[Qntdpass]= a;
+            Qntdpass++;
+        }
+    }
 }

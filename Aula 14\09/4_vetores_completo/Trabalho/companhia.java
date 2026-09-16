@@ -5,6 +5,31 @@ public class companhia {
     private float telefone;
     private String email;
     private String endereco;
+    private int Qntdvoos;
+    private voo[] vetVoos;
+
+
+    
+    public voo getVetVoos(int vo) {
+        return this.vetVoos[vo];
+    }
+
+
+    public void setVetVoos(voo a) {
+        if (this.Qntdvoos < 10) {
+            this.vetVoos[Qntdvoos]= a;
+            Qntdvoos++;
+        }
+    }
+
+    public int getQntdvoos() {
+        return Qntdvoos;
+    }
+
+
+    public void setQntdvoos(int qntdvoos) {
+        Qntdvoos = qntdvoos;
+    }
 
 
     public String getNome() {

@@ -7,27 +7,27 @@ public class passageiro {
 
     
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(String n) {
+        this.nome = n;
     }
 
 
     public String getPassaporte() {
-        return passaporte;
+        return this.passaporte;
     }
 
 
-    public void setPassaporte(String passaporte) {
-        this.passaporte = passaporte;
+    public void setPassaporte(String p) {
+        this.passaporte = p;
     }
 
 
     public float getDatansc() {
-        return datansc;
+        return this.datansc;
     }
 
 
@@ -37,7 +37,7 @@ public class passageiro {
 
 
     public float getCPF() {
-        return CPF;
+        return this.CPF;
     }
 
 
@@ -47,11 +47,11 @@ public class passageiro {
 
 
     public float getContato() {
-        return contato;
+        return this.contato;
     }
 
 
-    public void setContato(float contato) {
-        this.contato = contato;
+    public void setContato(float c) {
+        this.contato = c;
     }
 }
