@@ -8,16 +8,17 @@ public class companhia {
     private int Qntdvoos;
     private voo[] vetVoos;
 
-
     
-    public voo getVetVoos(int vo) {
-        return this.vetVoos[vo];
+     // Construtor da companhia
+    public companhia() {
+        this.vetVoos = new voo[10];
+        this.Qntdvoos = 0;
     }
 
-
+    // Adiciona um voo no vetor
     public void setVetVoos(voo a) {
         if (this.Qntdvoos < 10) {
-            this.vetVoos[Qntdvoos]= a;
+            this.vetVoos[Qntdvoos] = a;
             Qntdvoos++;
         }
     }
