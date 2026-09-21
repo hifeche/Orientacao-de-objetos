@@ -78,7 +78,7 @@ public class companhia {
         System.out.print("Digite o passaporte: ");
         novoPassageiro.setPassaporte(teclado.nextLine());
 
-        System.out.print("Digite a data de nascimento: ");
+        System.out.print("Digite o ano de nascimento: ");
         novoPassageiro.setDatansc(teclado.nextFloat());
 
         System.out.print("Digite o CPF: ");
