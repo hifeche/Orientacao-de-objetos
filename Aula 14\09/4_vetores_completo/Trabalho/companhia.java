@@ -22,37 +22,77 @@ public class companhia {
     // metodo para cadastrar um voo
     public void cadastrarVoo(Scanner teclado) {
 
-        voo novoVoo = new voo();
+    // Cria um novo voo
+    voo novoVoo = new voo();
 
-        System.out.print("Digite o ID do voo: ");
-        novoVoo.setId(teclado.nextFloat());
+    // Cadastro dos dados do voo
+    System.out.print("Digite o ID do voo: ");
+    novoVoo.setId(teclado.nextFloat());
+
+    teclado.nextLine();
+
+    System.out.print("Digite a origem: ");
+    novoVoo.setOrigem(teclado.nextLine());
+
+    System.out.print("Digite o destino: ");
+    novoVoo.setDestino(teclado.nextLine());
+
+    System.out.print("Digite a hora de saida: ");
+    novoVoo.setHora_saida(teclado.nextFloat());
+
+    System.out.print("Digite a hora de chegada: ");
+    novoVoo.setHora_chagada(teclado.nextFloat());
+
+    teclado.nextLine();
+
+    System.out.print("Digite o status do voo: ");
+    novoVoo.setStatus(teclado.nextLine());
+
+    System.out.print("Digite o nome dos pilotos: ");
+    novoVoo.setPilotos(teclado.nextLine());
+
+
+    // Pergunta quantos passageiros serão cadastrados
+    System.out.print("Quantos passageiros deseja cadastrar? ");
+    int quantidade = teclado.nextInt();
+
+    teclado.nextLine();
+
+
+    // Cadastro dos passageiros
+    for (int i = 0; i < quantidade; i++) {
+
+        System.out.println("\n===== PASSAGEIRO " + (i + 1) + " =====");
+
+        // Cria um novo passageiro
+        passageiro novoPassageiro = new passageiro();
+
+        System.out.print("Digite o nome: ");
+        novoPassageiro.setNome(teclado.nextLine());
+
+        System.out.print("Digite o passaporte: ");
+        novoPassageiro.setPassaporte(teclado.nextLine());
+
+        System.out.print("Digite a data de nascimento: ");
+        novoPassageiro.setDatansc(teclado.nextFloat());
+
+        System.out.print("Digite o CPF: ");
+        novoPassageiro.setCPF(teclado.nextFloat());
+
+        System.out.print("Digite o contato: ");
+        novoPassageiro.setContato(teclado.nextFloat());
 
         teclado.nextLine();
 
-        System.out.print("Digite a origem: ");
-        novoVoo.setOrigem(teclado.nextLine());
+        // Adiciona o passageiro ao voo
+        novoVoo.setpassageiro(novoPassageiro);
+    }
 
-        System.out.print("Digite o destino: ");
-        novoVoo.setDestino(teclado.nextLine());
 
-        System.out.print("Digite a hora de saida: ");
-        novoVoo.setHora_saida(teclado.nextFloat());
+    // Adiciona o voo à companhia
+    setVetVoos(novoVoo);
 
-        System.out.print("Digite a hora de chegada: ");
-        novoVoo.setHora_chagada(teclado.nextFloat());
-
-        teclado.nextLine();
-
-        System.out.print("Digite o status do voo: ");
-        novoVoo.setStatus(teclado.nextLine());
-
-        System.out.print("Digite o nome dos pilotos: ");
-        novoVoo.setPilotos(teclado.nextLine());
-
-        // adiciona o voo no vetor da companhia
-        setVetVoos(novoVoo);
-
-        System.out.println("Voo cadastrado com sucesso!");
+    System.out.println("\nVoo cadastrado com sucesso!");
     }
 
 
