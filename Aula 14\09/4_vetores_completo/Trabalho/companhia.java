@@ -95,6 +95,31 @@ public class companhia {
     System.out.println("\nVoo cadastrado com sucesso!");
     }
 
+    // Lista todos os voos cadastrados
+    public void listarVoos() {
+
+    if (Qntdvoos == 0) {
+        System.out.println("Nenhum voo cadastrado.");
+    } else {
+
+        System.out.println("\n===== VOOS CADASTRADOS =====");
+
+        for (int i = 0; i < Qntdvoos; i++) {
+
+            voo v = vetVoos[i];
+
+                System.out.println("\nVoo " + (i + 1));
+                System.out.println("ID: " + v.getId());
+                System.out.println("Origem: " + v.getOrigem());
+                System.out.println("Destino: " + v.getDestino());
+                System.out.println("Hora de saida: " + v.getHora_saida());
+                System.out.println("Hora de chegada: " + v.getHora_chagada());
+                System.out.println("Status: " + v.getStatus());
+                System.out.println("Pilotos: " + v.getPilotos());
+            }
+        }
+    }
+
 
     // adiciona um voo no vetor
     public void setVetVoos(voo a) {
