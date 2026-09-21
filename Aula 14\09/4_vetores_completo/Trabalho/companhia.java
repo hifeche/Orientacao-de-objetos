@@ -104,6 +104,10 @@ public class companhia {
         }
     }
 
+    // Retorna um voo de determinada posição
+    public voo getVoo(int pos) {
+        return this.vetVoos[pos];
+    }
 
     public int getQntdvoos() {
         return Qntdvoos;
