@@ -120,7 +120,77 @@ public class companhia {
         }
     }
 
+    // Consulta um determinado voo
+    public void consultarVoo(Scanner teclado) {
 
+    // Verifica se existe algum voo cadastrado
+    if (Qntdvoos == 0) {
+
+        System.out.println("Nenhum voo cadastrado.");
+
+    } else {
+
+        // Pede o ID do voo que será consultado
+        System.out.print("Digite o ID do voo: ");
+        float idConsulta = teclado.nextFloat();
+
+        // Começamos considerando que o voo não foi encontrado
+        boolean encontrado = false;
+
+        // Percorre os voos cadastrados
+        for (int i = 0; i < Qntdvoos; i++) {
+
+            // Pega o voo da posição atual
+            voo v = vetVoos[i];
+
+            // Verifica se o ID do voo é igual ao ID digitado
+            if (v.getId() == idConsulta) {
+
+                encontrado = true;
+
+                // Mostra os dados do voo
+                System.out.println("\n===== DADOS DO VOO =====");
+                System.out.println("ID: " + v.getId());
+                System.out.println("Origem: " + v.getOrigem());
+                System.out.println("Destino: " + v.getDestino());
+                System.out.println("Hora de saida: " + v.getHora_saida());
+                System.out.println("Hora de chegada: " + v.getHora_chagada());
+                System.out.println("Status: " + v.getStatus());
+                System.out.println("Pilotos: " + v.getPilotos());
+
+                // Mostra os passageiros
+                System.out.println("\n===== PASSAGEIROS =====");
+
+                for (int j = 0; j < v.getQntdpass(); j++) {
+
+                    // Pega o passageiro da posição atual
+                    passageiro p = v.getpassageiro(j);
+
+                    System.out.println("\nPassageiro " + (j + 1));
+                    System.out.println("Nome: " + p.getNome());
+                    System.out.println("Passaporte: " + p.getPassaporte());
+                    System.out.println("Data de nascimento: " + p.getDatansc());
+                    System.out.println("CPF: " + p.getCPF());
+                    System.out.println("Contato: " + p.getContato());
+                }
+
+                // Calcula os assentos livres
+                int assentosLivres = 50 - v.getQntdpass();
+
+                System.out.println("\nAssentos livres: " + assentosLivres);
+
+                // Para o laço porque encontramos o voo
+                break;
+            }
+        }
+
+            // Caso nenhum voo tenha o ID informado
+            if (encontrado == false) {
+                System.out.println("Voo nao encontrado.");
+            }
+        }
+    }
+    
     // adiciona um voo no vetor
     public void setVetVoos(voo a) {
         if (this.Qntdvoos < 10) {
