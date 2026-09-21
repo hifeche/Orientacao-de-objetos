@@ -56,6 +56,11 @@ public class companhia {
     System.out.print("Quantos passageiros deseja cadastrar? ");
     int quantidade = teclado.nextInt();
 
+    if (quantidade > 50) {
+        System.out.println("O voo pode ter no maximo 50 passageiros.");
+        quantidade = 50;
+    }
+    
     teclado.nextLine();
 
 
