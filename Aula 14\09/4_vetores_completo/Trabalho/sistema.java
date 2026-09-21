@@ -33,7 +33,7 @@ public class Main {
                     break;
             
                 case 3:
-                    System.out.println("Consultar voo");
+                    companhia.consultarVoo(teclado);
                     break;
             
                 case 0:
