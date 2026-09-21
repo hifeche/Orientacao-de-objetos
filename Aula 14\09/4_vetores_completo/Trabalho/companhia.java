@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class companhia {
+
     private String nome;
     private float cnpj;
     private String pais;
@@ -11,55 +12,58 @@ public class companhia {
     private voo[] vetVoos;
 
 
-    public void cadastrarVoo(Scanner teclado) {
-
-    voo novoVoo = new voo();
-
-        System.out.print("Digite o ID do voo: ");
-        novoVoo.setId(teclado.nextFloat());
-    
-        teclado.nextLine();
-    
-        System.out.print("Digite a origem: ");
-        novoVoo.setOrigem(teclado.nextLine());
-    
-        System.out.print("Digite o destino: ");
-        novoVoo.setDestino(teclado.nextLine());
-    
-        System.out.print("Digite a hora de saida: ");
-        novoVoo.setHora_saida(teclado.nextFloat());
-    
-        System.out.print("Digite a hora de chegada: ");
-        novoVoo.setHora_chagada(teclado.nextFloat());
-    
-        teclado.nextLine();
-    
-        System.out.print("Digite o status do voo: ");
-        novoVoo.setStatus(teclado.nextLine());
-    
-        System.out.print("Digite o nome dos pilotos: ");
-        novoVoo.setPilotos(teclado.nextLine());
-    
-        // Adiciona o voo no vetor da companhia
-        setVetVoos(novoVoo);
-    
-        System.out.println("Voo cadastrado com sucesso!");
-    }
-    
-    
-     // Construtor da companhia
+    // construtor da companhia
     public companhia() {
         this.vetVoos = new voo[10];
         this.Qntdvoos = 0;
     }
 
-    // Adiciona um voo no vetor
+
+    // metodo para cadastrar um voo
+    public void cadastrarVoo(Scanner teclado) {
+
+        voo novoVoo = new voo();
+
+        System.out.print("Digite o ID do voo: ");
+        novoVoo.setId(teclado.nextFloat());
+
+        teclado.nextLine();
+
+        System.out.print("Digite a origem: ");
+        novoVoo.setOrigem(teclado.nextLine());
+
+        System.out.print("Digite o destino: ");
+        novoVoo.setDestino(teclado.nextLine());
+
+        System.out.print("Digite a hora de saida: ");
+        novoVoo.setHora_saida(teclado.nextFloat());
+
+        System.out.print("Digite a hora de chegada: ");
+        novoVoo.setHora_chagada(teclado.nextFloat());
+
+        teclado.nextLine();
+
+        System.out.print("Digite o status do voo: ");
+        novoVoo.setStatus(teclado.nextLine());
+
+        System.out.print("Digite o nome dos pilotos: ");
+        novoVoo.setPilotos(teclado.nextLine());
+
+        // adiciona o voo no vetor da companhia
+        setVetVoos(novoVoo);
+
+        System.out.println("Voo cadastrado com sucesso!");
+    }
+
+
+    // adiciona um voo no vetor
     public void setVetVoos(voo a) {
         if (this.Qntdvoos < 10) {
             this.vetVoos[Qntdvoos] = a;
             Qntdvoos++;
         }
     }
+
 
     public int getQntdvoos() {
         return Qntdvoos;
