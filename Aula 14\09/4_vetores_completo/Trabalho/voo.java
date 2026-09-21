@@ -102,11 +102,8 @@ public class voo {
 
     // Adiciona um passageiro ao voo
     public void setpassageiro(passageiro a) {
-
         if (this.Qntdpass < 50) {
-
             this.vetPassageiros[Qntdpass] = a;
-
             Qntdpass++;
         }
     }
