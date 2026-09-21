@@ -23,23 +23,23 @@ public class Main {
             opcao = teclado.nextInt();
 
             switch (opcao) {
-
+            
                 case 1:
                     companhia.cadastrarVoo(teclado);
                     break;
-
+            
                 case 2:
-                    System.out.println("Listar voos");
+                    companhia.listarVoos();
                     break;
-
+            
                 case 3:
                     System.out.println("Consultar voo");
                     break;
-
+            
                 case 0:
                     System.out.println("Programa encerrado.");
                     break;
-
+            
                 default:
                     System.out.println("Opcao invalida!");
             }
