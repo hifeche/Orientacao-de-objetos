@@ -1,57 +1,48 @@
 public class passageiro {
     private String nome;
     private String passaporte;
-    private float datansc;
-    private float CPF;
-    private float contato;
+    private int datansc;
+    private String CPF;
+    private String contato;
 
     
     public String getNome() {
-        return this.nome;
+    return this.nome;
     }
-
 
     public void setNome(String n) {
         this.nome = n;
     }
 
-
     public String getPassaporte() {
         return this.passaporte;
     }
-
 
     public void setPassaporte(String p) {
         this.passaporte = p;
     }
 
-
-    public float getDatansc() {
+    public int getDatansc() {
         return this.datansc;
     }
 
-
-    public void setDatansc(float datansc) {
+    public void setDatansc(int datansc) {
         this.datansc = datansc;
     }
 
-
-    public float getCPF() {
+    public String getCPF() {
         return this.CPF;
     }
 
-
-    public void setCPF(float cPF) {
-        CPF = cPF;
+    public void setCPF(String cPF) {
+        this.CPF = cPF;
     }
 
-
-    public float getContato() {
+    public String getContato() {
         return this.contato;
     }
 
-
-    public void setContato(float c) {
+    public void setContato(String c) {
         this.contato = c;
     }
 }

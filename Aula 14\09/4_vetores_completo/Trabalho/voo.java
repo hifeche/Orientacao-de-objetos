@@ -1,10 +1,10 @@
 public class voo {
 
-    private float id;
+    private int id;
     private String origem;
     private String destino;
-    private float hora_saida;
-    private float hora_chagada;
+    private int hora_saida;
+    private int hora_chagada;
     private String status;
     private String pilotos;
 
@@ -22,11 +22,11 @@ public class voo {
     }
 
 
-    public float getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(float id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -49,20 +49,20 @@ public class voo {
     }
 
 
-    public float getHora_saida() {
+    public int getHora_saida() {
         return hora_saida;
     }
 
-    public void setHora_saida(float hora_saida) {
+    public void setHora_saida(int hora_saida) {
         this.hora_saida = hora_saida;
     }
 
 
-    public float getHora_chagada() {
+    public int getHora_chagada() {
         return hora_chagada;
     }
 
-    public void setHora_chagada(float hora_chagada) {
+    public void setHora_chagada(int hora_chagada) {
         this.hora_chagada = hora_chagada;
     }
 
