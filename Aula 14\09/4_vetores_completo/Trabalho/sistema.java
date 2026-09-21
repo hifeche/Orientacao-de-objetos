@@ -25,7 +25,7 @@ public class Main {
             switch (opcao) {
 
                 case 1:
-                    System.out.println("Cadastrar voo");
+                    companhia.cadastrarVoo(teclado);
                     break;
 
                 case 2:
