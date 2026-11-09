@@ -27,13 +27,13 @@ public class PrecoVenda {
         }
 
         // Nomes dos arquivos (Etapa 2) - vazio usa o padrao
-        System.out.print("Arquivo de entrada [preco_custo.csv]: ");
+        System.out.print("Arquivo de entrada: ");
         String entrada = teclado.nextLine().trim();
         if (entrada.isEmpty()) {
             entrada = "preco_custo.csv";
         }
 
-        System.out.print("Arquivo de saida [preco_venda.csv]: ");
+        System.out.print("Arquivo de saida: ");
         String saida = teclado.nextLine().trim();
         if (saida.isEmpty()) {
             saida = "preco_venda.csv";
